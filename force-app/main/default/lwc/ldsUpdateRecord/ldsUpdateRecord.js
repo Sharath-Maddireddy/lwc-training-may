@@ -2,6 +2,7 @@ import { LightningElement, api } from 'lwc';
 import { updateRecord, deleteRecord } from 'lightning/uiRecordApi';
 import ID_FIELD from '@salesforce/schema/Account.Id';
 import Name_FIELD from '@salesforce/schema/Account.Name';
+
 export default class LdsUpdateRecord extends LightningElement {
 
     @api recordId;

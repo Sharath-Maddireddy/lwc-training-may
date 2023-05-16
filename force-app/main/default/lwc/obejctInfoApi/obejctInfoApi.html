@@ -1,0 +1,13 @@
+<template>
+    <lightning-card  variant="Narrow" title="Object Info API" icon-name="standard:account">
+        <div class="slds-p-around_large">
+            <lightning-combobox
+                name="progress"
+                label="Industry"
+                options={industryOpt}
+                onchange={hanleChange} >
+            </lightning-combobox>
+        </div>
+        <div slot="footer">Card Footer</div>
+    </lightning-card>
+</template>
