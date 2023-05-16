@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This Lightning Message Channel sends notification from Invoice Tile Component to Invoice Detail Component</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>Message To Send</description>
+        <fieldName>message</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>The Invoice Record Id</description>
+        <fieldName>recordId</fieldName>
+    </lightningMessageFields>
+    <masterLabel>InvoiceRelatedRecords</masterLabel>
+</LightningMessageChannel>

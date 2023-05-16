@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                font-size: 50px;
+                color: darkgoldenrod;
+                align-items: center !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="DOMExample"></div>
+        <script>
+            const element = document.querySelector('#DOMExample')
+            const shadowRoot = element.attachShadow({mode:'open'})
+            shadowRoot.innerHTML = 'How Shadow DOM Works in Normal Browser'
+        </script>
+    </body>
+</html>

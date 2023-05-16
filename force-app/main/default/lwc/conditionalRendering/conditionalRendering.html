@@ -1,0 +1,64 @@
+<template>
+
+    <c-hello-world users={users}></c-hello-world>
+    
+    <!-- {!c.handleClik }-->
+    <lightning-button label="Click Me" title="Click Me" onclick={handleClick} ></lightning-button>
+
+    <div if:true={showTom}>
+        I am tom
+        <img width="300" height="300" src="https://cdn.pixabay.com/photo/2020/05/11/15/38/tom-5158824_640.png" alt="Tom Image" />
+    </div>
+
+    <div if:false={showTom}>
+        I am jerry
+        <img width="300" height="300" src="https://i.pinimg.com/originals/32/c0/aa/32c0aa1e16f36e30c1807ad4720b93ef.png" alt="Jerry Image" />
+    </div>
+    <!-- 
+        if(showTom == true){
+            // Code executed
+        }else if(showJerry == true){
+        }else{
+        }
+        List<String> strList = new List<String>{'A','B','C','A'};
+    -->
+    <template lwc:if={showTom}>
+        <img width="300" height="300" src="https://cdn.pixabay.com/photo/2020/05/11/15/38/tom-5158824_640.png" alt="Tom Image" />
+    </template>
+    <template lwc:elseif={showJerry}>
+        <img width="300" height="300" src="https://i.pinimg.com/originals/32/c0/aa/32c0aa1e16f36e30c1807ad4720b93ef.png" alt="Jerry Image" />
+    </template>
+    <template lwc:else>
+        <img src="https://static.wikia.nocookie.net/tomandjerry/images/0/0f/Quiz-tom-jerry-richtig-03-1035-10110.png/revision/latest?cb=20200118121656"
+            width="300" height="300"
+        />
+    </template>
+
+    <!--
+        for(Account acc: accountList){
+            System.debug(acc.Id);
+        }
+    -->
+    <template for:each={users} for:item="user" for:index="index">
+        <!-- { name: 'Amit Singh', email: 'infor@gmail.com' }, -->
+        <div class="slds-m-around_large" key={user.email}>
+            {index} - {user.name} , {user.email}
+        </div>
+        <div class="slds-m-around_large" key={user.email}>
+            <li>I am inside Paragraph</li>
+        </div>
+    </template>
+
+    <template iterator:user={users}>
+        <div class="slds-m-around_large" key={user.value.email}>
+            <div if:true={user.first}>
+                <hr/>
+            </div>
+            {user.index} - {user.value.name} , {user.value.email}
+            <div if:true={user.last}>
+                <hr/>
+            </div>
+        </div>
+    </template>
+
+</template>

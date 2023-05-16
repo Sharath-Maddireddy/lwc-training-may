@@ -1,0 +1,14 @@
+<aura:component implements="lightning:actionOverride,force:hasRecordId,force:hasSObjectName">
+    <lightning:navigation aura:id="navService"/>
+    <lightning:card title="New Invoice">
+        <aura:set attribute="actions">
+            <lightning:button label="Go To CompanyPage" onclick="{!c.handleNavigate}"/>
+        </aura:set>
+        <div class="slds-p-horizontal_small">
+            <p>You can only create Invoice from Company Detail Page.</p>
+            <p>
+                Click <a href="JavaScript:void(0);" onclick="{!c.handleNavigate}">here</a> to go to CompanyPage
+            </p>
+        </div>
+    </lightning:card>
+</aura:component>

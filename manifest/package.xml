@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>InvoiceAuraService</members>
+		<members>InvoiceDetailLWCService</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>invoiceOverideComponent</members>
+		<name>AuraDefinitionBundle</name>
+	</types>
+	<types>
+		<members>InvoiceLineItem__c</members>
+		<members>Invoice__c</members>
+		<members>Payment__c</members>
+		<members>Refund__c</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>Invoice_Management_UtilityBar</members>
+		<members>Invoice_Record_Page</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>InvoiceLineItem__c-Invoice Line Item Layout</members>
+		<members>Invoice__c-Invoice Layout</members>
+		<members>Payment__c-Payment Layout</members>
+		<members>Refund__c-Refund Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>invoiceAddNewInvoice</members>
+		<members>invoiceCreateComponent</members>
+		<members>invoiceDetail</members>
+		<members>invoiceListComponent</members>
+		<members>invoiceTileComponent</members>
+		<name>LightningComponentBundle</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>LightningMessageChannel</name>
+	</types>
+	<version>55.0</version>
+</Package>

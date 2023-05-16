@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  variant="Narrow" title="LDS Get Record" icon-name="standard:account">
+        <div class="slds-p-horizontal_small">
+            <template if:true={accounRecord}>
+                <div >
+                    <p>
+                        {name}
+                    </p>
+                    <p>
+                        {annualRevenue}
+                    </p>
+                    <p>
+                        {industry}
+                    </p>
+                </div>
+            </template>
+        </div>
+        <div slot="footer">Card Footer</div>
+    </lightning-card>
+</template>

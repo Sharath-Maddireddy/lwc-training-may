@@ -1,0 +1,22 @@
+<template>
+    <lightning-card  variant="Narrow" title="To do list" icon-name="standard:task">
+        <div class="slds-p-horizontal_small">
+            <!-- event.currentTaregt --> <!-- event.target -->
+            <lightning-input type="text" variant="label-stacked" name="Title" label="Title" onchange={handleTitleChange} ></lightning-input>
+            <lightning-input type="text" variant="label-stacked" name="Description" label="Description" onchange={handleDescChange} ></lightning-input>
+            <lightning-button variant="brand" label="Add To do" title="Add To do" onclick={handleClick}></lightning-button>
+        </div>
+        <div class="slds-p-horizontal_small">
+            <template if:true={todos} for:each={todos} for:item="todo" for:index="index">
+                <li key={todo.Id}><!-- event.target -->
+                    <a data-record-id={todo.Id} data-todo-title={todo.Title} data-description={todo.Description} href="#" onclick={handleTodoClick} >
+                        {todo.Title}
+                    </a> <!-- event.currentTaregt -->
+                    {todo.Description}
+                </li>
+            </template>
+            <c-child records={todos} ></c-child>
+        </div>
+        <div slot="footer">Card Footer</div>
+    </lightning-card>
+</template>
